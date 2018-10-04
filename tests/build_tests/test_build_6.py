@@ -8,7 +8,7 @@ def test_build():
         'dl4j_version': '1.0.0-SNAPSHOT',
         'dl4j_core': True,
         'datavec': False,
-        'spark': False,
+        'spark': True,
         'spark_version': '2',
         'scala_version': '2.11',
         'nd4j_backend': 'cpu'
@@ -25,7 +25,7 @@ def test_build():
 
     import jumpy as jp
 
-    assert jp.zeros((3,2)).numpy().sum() == 0
+    assert jp.zeros((3, 2)).numpy().sum() == 0
 
 
 if __name__ == '__main__':

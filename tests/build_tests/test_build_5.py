@@ -32,7 +32,7 @@ def test_build():
 
     import jumpy as jp
 
-    assert jp.zeros((3,2)).numpy().sum() == 0
+    assert jp.zeros((3, 2)).numpy().sum() == 0
 
     _datavec_test()
 

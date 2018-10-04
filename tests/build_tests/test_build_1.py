@@ -8,9 +8,14 @@ def _spark_test():
     SparkConf = autoclass('org.apache.spark.SparkConf')
     SparkContext = autoclass('org.apache.spark.api.java.JavaSparkContext')
     JavaRDD = autoclass('org.apache.spark.api.java.JavaRDD')
-    SparkTransformExecutor = autoclass('org.datavec.spark.transform.SparkTransformExecutor')
-    StringToWritablesFunction = autoclass('org.datavec.spark.transform.misc.StringToWritablesFunction')
-    WritablesToStringFunction = autoclass('org.datavec.spark.transform.misc.WritablesToStringFunction')
+    SparkTransformExecutor = autoclass('org.datavec.spark.'
+                                       'transform.SparkTransformExecutor')
+    StringToWritablesFunction = autoclass('org.datavec.spark.'
+                                          'transform.misc.'
+                                          'StringToWritablesFunction')
+    WritablesToStringFunction = autoclass('org.datavec.spark.'
+                                          'transform.misc.'
+                                          'WritablesToStringFunction')
 
     spark_conf = SparkConf()
     spark_conf.setMaster('local[*]')
@@ -44,7 +49,7 @@ def test_build():
 
     import jumpy as jp
 
-    assert jp.zeros((3,2)).numpy().sum() == 0
+    assert jp.zeros((3, 2)).numpy().sum() == 0
 
     _spark_test()
 
