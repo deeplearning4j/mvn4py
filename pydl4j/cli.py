@@ -167,7 +167,7 @@ class CLI(object):
 
     def install(self):
         if is_docker_available():
-            use_docker = click.echo("Docker available on your system. Would you like to use docker for installation> (default 'y')[y/n]: ") or 'yes'
+            use_docker = input("Docker available on your system. Would you like to use docker for installation> (default 'y')[y/n]: ") or 'yes'
             if to_bool(use_docker):
                 click.echo(click.style(
                     "Docker is running, starting installation.", fg="green", bold=True))
